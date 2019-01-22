@@ -37,7 +37,7 @@ if($Vm.Statuses.DisplayStatus -eq "VM Running")
 else 
 {
     Write-Output "$(Get-TimeStamp) virtual machine /$VmName/ is stopped. " | Out-file $LogFileName -Append
-    Start-AzureRmVm -ResourceGroup $ResourceGroupName -Name $VmName -Force
+    Start-AzureRmVm -ResourceGroup $ResourceGroupName -Name $VmName
     Write-Output "$(Get-TimeStamp) virtual machine /$VmName/ has been started. " | Out-file $LogFileName -Append
     Write-Output "$(Get-TimeStamp) " | Out-file $LogFileName -Append
 }
