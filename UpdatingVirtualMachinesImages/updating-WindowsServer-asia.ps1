@@ -48,7 +48,7 @@ foreach ($Region in $RegionArray)
     Write-Output "$(Get-TimeStamp) CmdLet /Get-AzureRmVmImage/ has been executed. " | Out-file log-WindowsServer.txt -Append
     Set-AzureStorageBlobContent -File $File -Container $StorageContainer -BlobType "Block" -Context $StorageContext -Verbose -Force 
     Write-Output "$(Get-TimeStamp) file $File has been created. " | Out-file log-WindowsServer.txt -Append
-    $FileSize = Get-Childitem -File $File | select length
+    $FileSize = Get-Childitem -File $File | Select-Object length
     Write-Output "$(Get-TimeStamp) file size: $FileSize " | Out-file log-WindowsServer.txt -Append
     Write-Output "$(Get-TimeStamp) " | Out-file log-WindowsServer.txt -Append 
 
@@ -58,7 +58,7 @@ foreach ($Region in $RegionArray)
     Write-Output "$(Get-TimeStamp) CmdLet /Get-AzureRmVMImageSku/ has been executed. " | Out-file log-WindowsServer.txt -Append
     Set-AzureStorageBlobContent -File $File -Container $StorageContainer -BlobType "Block" -Context $StorageContext -Verbose -Force 
     Write-Output "$(Get-TimeStamp) file $File has been created. " | Out-file log-WindowsServer.txt -Append
-    $FileSize = Get-Childitem -File $File | select length
+    $FileSize = Get-Childitem -File $File | Select-Object length
     Write-Output "$(Get-TimeStamp) file size: $FileSize " | Out-file log-WindowsServer.txt -Append
     Write-Output "$(Get-TimeStamp) " | Out-file log-WindowsServer.txt -Append 
 
@@ -70,12 +70,12 @@ foreach ($Region in $RegionArray)
         Write-Output "$(Get-TimeStamp) CmdLet /Get-AzureRmVMImage/ has been executed. " | Out-file log-WindowsServer.txt -Append
         Set-AzureStorageBlobContent -File $File -Container $StorageContainer -BlobType "Block" -Context $StorageContext -Verbose -Force 
         Write-Output "$(Get-TimeStamp) file $File has been created. " | Out-file log-WindowsServer.txt -Append
-        $FileSize = Get-Childitem -File $File | select length
+        $FileSize = Get-Childitem -File $File | Select-Object length
         Write-Output "$(Get-TimeStamp) file size: $FileSize " | Out-file log-WindowsServer.txt -Append
         Write-Output "$(Get-TimeStamp) " | Out-file log-WindowsServer.txt -Append
     }
 
-$LogSize = Get-Childitem -File log-WindowsServer.txt | Select length
+$LogSize = Get-Childitem -File log-WindowsServer.txt | Select-Object length
 Write-Output "$(Get-TimeStamp) log size: $LogSize " | Out-file log-WindowsServer.txt -Append
 Write-Output "$(Get-TimeStamp) " | Out-file log-WindowsServer.txt -Append
 Write-Output "$(Get-TimeStamp) --- end script ---" | Out-file log-WindowsServer.txt -Append
