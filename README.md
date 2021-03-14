@@ -1,15 +1,16 @@
-Azure Runbooks scripts and resources
-====================================
+
+# AZURE-RUNBOOKS
+
+# Status
+
+[PUBLIC]
 
 # Folders organization
 
--  
-
 # Comments
-
-- Please feel free to contribute to these scripts. 
-- Fork and Clone are also availables. 
 
 # License
 
-# Last update: 2020.08.26
+Check the License file.
+
+# Last update: 2021.03.14
