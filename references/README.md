@@ -1,9 +1,22 @@
-# references
 
-## Purpose
+# README.md
 
-This folder is containing references used/interesting for the project.
+## introduction
 
-## Documents
+this folder is containing some references concerning the solution Kubernetes.
 
-- [Markdown syntax](https://github.com/ropy1971/azure-runbooks/blob/master/references/markdown-cheatsheet-online.pdf)
+## content
+
+## references
+
+Some useful references for this repository.
+
+### documentation
+
+### reading
+
+### webistes
+
+## last updates: 2021.06.28
+
+
